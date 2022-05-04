@@ -1,0 +1,11 @@
+[Unit]
+Description=Daemon for monitoring CNC button GPIO.0(BCM 17) to switch backlight
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/backlight_switch
+Restart=always
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
